@@ -1,6 +1,6 @@
-i#!/usr/bin/python3
+#!/usr/bin/python3
 
 str = "Holberton School"
-print("Holberton School"*3)
-print("\n")
-print("Holberton")
+print(f"Holberton School"*3)
+print(f"\n")
+print(f"Holberton")

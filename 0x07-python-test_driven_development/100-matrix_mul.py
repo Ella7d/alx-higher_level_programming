@@ -1,22 +1,27 @@
 #!/usr/bin/python3
+"""
+module composed by a function that multiplies 2 matrices
 
-""" a matrix multiplication function."""
+"""
 
 
 def matrix_mul(m_a, m_b):
-    """Multiply two matrices.
+    """ Function that multiplies 2 matrices
     Args:
-        m_a (list of lists of ints/floats): The first matrix.
-        m_b (list of lists of ints/floats): The second matrix.
-    Raises:
-        TypeError: If either m_a or m_b is not a list of lists of ints/floats.
-        TypeError: If either m_a or m_b is empty.
-        TypeError: If either m_a or m_b has different-sized rows.
-        ValueError: If m_a and m_b cannot be multiplied.
+        m_a: matrix a
+        m_b: matrix b
     Returns:
-       A new matrix representing the multiplication of m_a by m_b
+        result of the multiplication
+    Raises:
+        TypeError: if m_a or m_b aren't a list
+        TypeError: if m_a or m_b aren't a list of a lists
+        ValueError: if m_a or m_b are empty
+        TypeError: if the lists of m_a or m_b don't have integers or floats
+        TypeError: if the rows of m_a or m_b don't have the same size
+        ValueError: if m_a and m_b can't be multiplied
     """
-if not isinstance(m_a, list):
+
+    if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
 
     if not isinstance(m_b, list):

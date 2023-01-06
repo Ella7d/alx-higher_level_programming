@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 """Define addition of two integers"""
+
 
 def add_integer(a, b):
     """Return the addition of two numbers."""

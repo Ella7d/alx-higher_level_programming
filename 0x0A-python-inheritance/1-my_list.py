@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-
-"""contains the MyList class"""
+"""Contains `MyList` class"""
 
 
 class MyList(list):
-    """a subclass of list"""
+    """Class that extends the list base class"""
 
     def print_sorted(self):
-             """prints sorted list"""
+        """Prints a sorted list"""
         print(sorted(self))

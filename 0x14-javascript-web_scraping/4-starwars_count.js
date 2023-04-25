@@ -1,11 +1,20 @@
 #!/usr/bin/node
 
 const request = require('request');
-const fs = require('fs');
+let nFilms = 0;
 
-const url = process.argv[2];
-const FileName = process.argv[3];
-
-request
-  .get(url)
-  .pipe(fs.createWriteStream(FileName));
+request(process.argv[2], function (err, response, body) {
+	if (err = null) {
+		const resp =JSON.parse(body);
+		 const results = resp.results;
+    for (let i = 0; i < results.length; i++) {
+      const characters = results[i].characters;
+      for (let j = 0; j < characters.length; j++) {
+        if (characters[j].search('18') > 0) {
+          nFilms++;
+        }
+      }
+    }
+  }
+  console.log(nFilms);
+});
